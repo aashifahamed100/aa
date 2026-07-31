@@ -178,7 +178,7 @@ Explore Portfolio
 
 <div class="card">
 <h2>About Me</h2>
-</section>
+
 <p>
 Hi! I'm <b>Aashif Ahmed</b> from Kattankudy, Eastern Province, Sri Lanka.
 I create premium websites, AI-powered designs and modern digital experiences with a focus on clean, creative and user-friendly interfaces.
@@ -196,6 +196,7 @@ I create premium websites, AI-powered designs and modern digital experiences wit
 <progress value="85" max="100"></progress>
 
 </div>
+</section>
 <section id="projects">
 
 <h2 style="text-align:center;margin-bottom:40px;font-size:38px;">
@@ -360,18 +361,6 @@ const observer = new IntersectionObserver((entries)=>{
 });
 
 faders.forEach(card=>observer.observe(card));
-    const faders = document.querySelectorAll(".fade");
-
-const observer = new IntersectionObserver((entries)=>{
-    entries.forEach(entry=>{
-        if(entry.isIntersecting){
-            entry.target.classList.add("show");
-        }
-    });
-});
-
-faders.forEach(card=>observer.observe(card));
-
 </script>
 
 </body>
