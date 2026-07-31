@@ -1,27 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Aashif Ahmed | Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
-background:linear-gradient(-45deg,#0f172a,#1e293b,#111827,#312e81);
-background-size:400% 400%;
-animation:bg 12s ease infinite;
-color:white;
-overflow-x:hidden;
+    background:linear-gradient(-45deg,#0f172a,#1e293b,#111827,#312e81);
+    background-size:400% 400%;
+    animation:bg 12s ease infinite;
+    color:#fff;
+    overflow-x:hidden;
 }
 
 @keyframes bg{
@@ -30,206 +36,82 @@ overflow-x:hidden;
 100%{background-position:0% 50%;}
 }
 
-nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:25px 10%;
-position:fixed;
-width:100%;
-top:0;
-background:rgba(255,255,255,.08);
-backdrop-filter:blur(12px);
-z-index:1000;
-}
-
-nav h2{
-font-size:24px;
-}
-
-nav a{
-color:white;
-text-decoration:none;
-margin-left:20px;
-}
-
-.hero{
-    min-height:auto;
-    padding:40px 0;
+section{
+    width:100%;
+    padding:90px 10%;
 }
 
 .card{
-background:rgba(255,255,255,.12);
-backdrop-filter:blur(18px);
-border:1px solid rgba(255,255,255,.2);
-border-radius:25px;
-padding:40px;
-text-align:center;
-max-width:700px;
-width:100%;
-box-shadow:0 20px 40px rgba(0,0,0,.35);
-animation:float 3s ease-in-out infinite;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:25px;
+    padding:30px;
+    box-shadow:0 15px 30px rgba(0,0,0,.3);
 }
 
-@keyframes float{
-50%{
-transform:translateY(-8px);
-}
-}
-
-.profile{
-width:180px;
-height:180px;
-border-radius:50%;
-object-fit:cover;
-border:5px solid rgba(255,255,255,.3);
-margin-bottom:20px;
-}
-
-h1{
-font-size:45px;
-margin-bottom:10px;
-}
-
-h3{
-font-weight:300;
-color:#ddd;
-margin-bottom:20px;
+h1,h2,h3{
+    margin-bottom:15px;
 }
 
 p{
-line-height:1.8;
-color:#ddd;
+    line-height:1.8;
+    color:#ddd;
+}
+
+a{
+    color:white;
+    text-decoration:none;
 }
 
 .button{
-display:inline-block;
-margin-top:25px;
-padding:14px 30px;
-background:white;
-color:#111;
-text-decoration:none;
-border-radius:40px;
-font-weight:bold;
-transition:.3s;
+    display:inline-block;
+    margin-top:25px;
+    padding:14px 30px;
+    background:white;
+    color:#111;
+    border-radius:30px;
+    font-weight:bold;
+    transition:.3s;
 }
 
 .button:hover{
-transform:scale(1.08);
-}
-@media (max-width: 768px) {
-
-  nav {
-    flex-direction: column;
-    gap: 15px;
-    text-align: center;
-  }
-
-  .card {
-    width: 90% !important;
-    margin: 20px auto;
-    padding: 20px;
-  }
-
-  h1 {
-    font-size: 36px;
-  }
-
-  h2 {
-    font-size: 28px;
-  }
-
-@media (max-width:768px){
-
-nav{
-    flex-direction:column;
-    align-items:center;
-    gap:15px;
-    padding:20px;
+    transform:scale(1.05);
 }
 
-nav div{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:15px;
-}
-
-.hero{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    min-height:100vh;
-    padding:120px 20px 40px;
-}
-
-.card{
-    width:90%;
-    max-width:700px;
-    margin:20px auto;
-    padding:25px;
-}
-
-.profile{
-    width:140px;
-    height:140px;
-}
-
-h1{
-    font-size:36px;
-}
-
-h2{
-    font-size:30px;
-}
-
-p{
-    font-size:16px;
-}
-}
-
-section{
-    width:100%;
-    padding:80px 10%;
-}
-
-#about{
-    text-align:center;
-}
-
-#contact .card{
-    max-width:600px;
-    margin:auto;
-}
 </style>
 
 </head>
 
 <body>
-
-<nav>
+    <nav style="position:fixed;top:0;width:100%;display:flex;justify-content:space-between;align-items:center;padding:20px 10%;background:rgba(0,0,0,.2);backdrop-filter:blur(15px);z-index:1000;">
 
 <h2>Aashif</h2>
 
-<div>
-<a href="#">Home</a>
-<a href="#">About</a>
-<a href="#">Projects</a>
-<a href="#">Contact</a>
+<div style="display:flex;gap:20px;flex-wrap:wrap;">
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
 </div>
 
 </nav>
 
-<section class="hero">
+<section id="home" style="min-height:100vh;display:flex;justify-content:center;align-items:center;padding-top:100px;">
 
-<div class="card">
+<div class="card" style="max-width:750px;text-align:center;">
 
-<img src="profile.png" class="profile">
+<img src="profile.png"
+style="width:180px;height:180px;border-radius:50%;object-fit:cover;border:5px solid rgba(255,255,255,.3);">
 
-<h1>Aashif Ahmed</h1><p id="typing" style="font-size:22px;color:#b8c1ec;font-weight:600;height:30px;"></p>
-  <p id="typing" style="font-size:22px;color:#b8c1ec;font-weight:600;height:30px;"></p>
+<h1 style="margin-top:20px;">Aashif Ahmed</h1>
+
+<p id="typing"
+style="font-size:22px;color:#9ecbff;height:35px;font-weight:600;">
+</p>
+
 <p>
-I'm Aashif Ahmed from Kattankudy, Sri Lanka.
+I'm Aashif Ahmed from Kattankudy, Sri Lanka.<br>
 I build premium websites, AI designs and modern digital experiences.
 </p>
 
@@ -239,182 +121,4 @@ Explore Portfolio
 
 </div>
 
-<section id="about" style="padding:80px 10%;">
-
-<div class="card">
-    <h2>About Me</h2>
-
-    <p>
-        Hi! I'm <b>Aashif Ahmed</b> from Kattankudy,
-        Eastern Province, Sri Lanka.
-
-        I create premium websites, AI-powered designs,
-        and modern digital experiences with a focus on clean,
-        creative, and user-friendly interfaces.
-    </p>
-</div>
-
-<h2>My Skills</h2>
-
-<div class="card">
-    <h3>💻 Learning Programming</h3>
-    <p>Currently learning HTML, CSS and JavaScript.</p>
-</div>
-
-<div class="card">
-    <h3>🎨 UI Design</h3>
-    <p>Interested in modern UI, glassmorphism and responsive design.</p>
-</div>
-
-<div class="card">
-    <h3>🤖 AI Tools</h3>
-    <p>Using AI tools like ChatGPT to build websites and improve productivity.</p>
-</div>
-
 </section>
-
-<h2 style="text-align:center;font-size:38px;margin-bottom:40px;">
-My Projects
-</h2>
-
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px;">
-
-<div class="card">
-<h3>🌐 Personal Portfolio</h3>
-<p>
-Modern glassmorphism portfolio website built using HTML and CSS.
-</p>
-</div>
-
-<div class="card">
-<h3>🤖 AI Projects</h3>
-<p>
-Creating AI-powered tools and experimenting with ChatGPT workflows.
-</p>
-</div>
-
-<div class="card">
-<h3>🎨 UI Design</h3>
-<p>
-Designing clean, modern and responsive website interfaces.
-</p>
-</div>
-
-</div>
-
-  </section>
-  <section id="contact" style="padding:80px 10%;">
-  <h2 style="text-align:center;font-size:38px;margin-bottom:40px;">
-Contact Me
-</h2>
-
-<div class="card" style="max-width:600px;margin:auto;text-align:left;line-height:2.2;font-size:18px;">
-
-<p>📧 <strong>Email:</strong>
-<a href="mailto:aashifahamed100@gmail.com">
-aashifahamed100@gmail.com
-</a></p>
-
-<p>📱 <strong>Phone:</strong>
-<a href="tel:+94703904514">+94 703904514</a>
-</p>
-
-<p>💬 <strong>WhatsApp:</strong>
-<a href="https://wa.me/94703904514" target="_blank">
-Message Me
-</a></p>
-
-<p>📍 <strong>Location:</strong>
-Kattankudy, Sri Lanka
-</p>
-
-<p>📷 <strong>Instagram:</strong>
-<a href="https://instagram.com/aashif.xhxmed_" target="_blank">
-@aashif.xhxmed_
-</a></p>
-
-<p>💻 <strong>GitHub:</strong>
-<a href="https://github.com/aashifahamed100" target="_blank">
-github.com/aashifahamed100
-</a></p>
-
-</div>
-  </section>
-  <footer style="text-align:center;padding:30px;color:#aaa;font-size:16px;">
-  © 2025 Aashif Ahmed. All Rights Reserved.
-  </footer>
-  <script>
-const words = [
-  "AI Designer",
-  "Creative Developer",
-  "Web Designer",
-  "Frontend Learner"
-];
-
-let wordIndex = 0;
-let charIndex = 0;
-let deleting = false;
-
-function typeEffect() {
-  const text = words[wordIndex];
-  const element = document.getElementById("typing");
-
-  if (!element) return;
-
-  if (!deleting) {
-    element.innerHTML = text.substring(0, charIndex++);
-    if (charIndex > text.length) {
-      deleting = true;
-      setTimeout(typeEffect, 1200);
-      return;
-    }
-  } else {
-    element.innerHTML = text.substring(0, charIndex--);
-    if (charIndex < 0) {
-      deleting = false;
-      wordIndex = (wordIndex + 1) % words.length;
-    }
-  }
-
-  setTimeout(typeEffect, deleting ? 40 : 90);
-}
-
-typeEffect();
-    const themeBtn = document.getElementById("themeBtn");
-
-let darkMode = true;
-
-themeBtn.addEventListener("click", () => {
-    if (darkMode) {
-        document.body.style.background = "#f5f5f5";
-        document.body.style.color = "#111";
-        themeBtn.innerHTML = "☀️";
-    } else {
-        document.body.style.background = "#0f172a";
-        document.body.style.color = "#fff";
-        themeBtn.innerHTML = "🌙";
-    }
-
-    darkMode = !darkMode;
-});
-    <script>
-    // typing animation code
-
-    typeEffect();
-
-    // 👇 Fade animation code inga
-    const faders = document.querySelectorAll(".fade");
-
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("show");
-            }
-        });
-    });
-
-    faders.forEach(item => observer.observe(item));
-
-</script>
-</body>
-</html>
