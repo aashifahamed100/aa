@@ -329,6 +329,17 @@ setTimeout(typing,deleting?50:90);
 }
 
 typing();
+    const faders = document.querySelectorAll(".fade");
+
+const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            entry.target.classList.add("show");
+        }
+    });
+});
+
+faders.forEach(card=>observer.observe(card));
 
 </script>
 
