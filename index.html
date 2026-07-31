@@ -86,6 +86,16 @@ a{
     transform:translateY(-10px);
     box-shadow:0 20px 40px rgba(0,0,0,.4);
 }
+    .fade{
+    opacity:0;
+    transform:translateY(40px);
+    transition:all .8s ease;
+}
+
+.fade.show{
+    opacity:1;
+    transform:translateY(0);
+}
 </style>
 
 </head>
@@ -147,21 +157,21 @@ I create premium websites, AI-powered designs and modern digital experiences wit
 
 <br>
 
-<div class="card">
+<div class="card fade">
 <h3>💻 Learning Programming</h3>
 <p>Currently learning HTML, CSS and JavaScript.</p>
 </div>
 
 <br>
 
-<div class="card">
+<div class="card fade">
 <h3>🎨 UI Design</h3>
 <p>Interested in modern UI, glassmorphism and responsive design.</p>
 </div>
 
 <br>
 
-<div class="card">
+<div class="card fade">
 <h3>🤖 AI Tools</h3>
 <p>Using AI tools like ChatGPT to build websites and improve productivity.</p>
 </div>
@@ -179,21 +189,20 @@ grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:25px;
 ">
 
-<div class="card">
+<div class="card fade">
 <h3>🌐 Personal Portfolio</h3>
 <p>
 Modern glassmorphism portfolio website built using HTML, CSS and JavaScript.
 </p>
 </div>
 
-<div class="card">
+<div class="card fade">
 <h3>🤖 AI Projects</h3>
 <p>
 Creating AI-powered tools and experimenting with ChatGPT workflows.
 </p>
 </div>
-
-<div class="card">
+<div class="card fade">
 <h3>🎨 UI Design</h3>
 <p>
 Designing clean, modern and responsive website interfaces.
