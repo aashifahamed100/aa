@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+6<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -260,5 +260,43 @@ github.com/aashifahamed100
   <footer style="text-align:center;padding:30px;color:#aaa;font-size:16px;">
   © 2025 Aashif Ahmed. All Rights Reserved.
   </footer>
+  <script>
+const words = [
+  "AI Designer",
+  "Creative Developer",
+  "Web Designer",
+  "Frontend Learner"
+];
+
+let wordIndex = 0;
+let charIndex = 0;
+let deleting = false;
+
+function typeEffect() {
+  const text = words[wordIndex];
+  const element = document.getElementById("typing");
+
+  if (!element) return;
+
+  if (!deleting) {
+    element.innerHTML = text.substring(0, charIndex++);
+    if (charIndex > text.length) {
+      deleting = true;
+      setTimeout(typeEffect, 1200);
+      return;
+    }
+  } else {
+    element.innerHTML = text.substring(0, charIndex--);
+    if (charIndex < 0) {
+      deleting = false;
+      wordIndex = (wordIndex + 1) % words.length;
+    }
+  }
+
+  setTimeout(typeEffect, deleting ? 40 : 90);
+}
+
+typeEffect();
+  </script>
 </body>
 </html>
