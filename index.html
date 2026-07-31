@@ -96,6 +96,38 @@ a{
     opacity:1;
     transform:translateY(0);
 }
+    progress{
+    width:100%;
+    height:12px;
+    margin:10px 0 20px;
+    border:none;
+    border-radius:10px;
+    overflow:hidden;
+}
+
+progress::-webkit-progress-bar{
+    background:#2d3748;
+    border-radius:10px;
+}
+
+progress::-webkit-progress-value{
+    background:linear-gradient(90deg,#4f46e5,#7c3aed);
+    border-radius:10px;
+}
+
+progress::-moz-progress-bar{
+    background:linear-gradient(90deg,#4f46e5,#7c3aed);
+}
+    .fade{
+    opacity:0;
+    transform:translateY(40px);
+    transition:all .8s ease;
+}
+
+.fade.show{
+    opacity:1;
+    transform:translateY(0);
+}
 </style>
 
 </head>
@@ -151,32 +183,23 @@ I create premium websites, AI-powered designs and modern digital experiences wit
 
 </div>
 
-<br>
-
 <h2 style="text-align:center;">My Skills</h2>
 
-<br>
-
 <div class="card fade">
-<h3>💻 Learning Programming</h3>
-<p>Currently learning HTML, CSS and JavaScript.</p>
-</div>
 
-<br>
+<h3>💻 HTML</h3>
+<progress value="90" max="100"></progress>
 
-<div class="card fade">
-<h3>🎨 UI Design</h3>
-<p>Interested in modern UI, glassmorphism and responsive design.</p>
-</div>
+<h3>🎨 CSS</h3>
+<progress value="85" max="100"></progress>
 
-<br>
+<h3>⚡ JavaScript</h3>
+<progress value="65" max="100"></progress>
 
-<div class="card fade">
 <h3>🤖 AI Tools</h3>
-<p>Using AI tools like ChatGPT to build websites and improve productivity.</p>
-</div>
+<progress value="95" max="100"></progress>
 
-</section>
+</div>
 <section id="projects">
 
 <h2 style="text-align:center;margin-bottom:40px;font-size:38px;">
@@ -329,6 +352,17 @@ setTimeout(typing,deleting?50:90);
 }
 
 typing();
+    const faders = document.querySelectorAll(".fade");
+
+const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            entry.target.classList.add("show");
+        }
+    });
+});
+
+faders.forEach(card=>observer.observe(card));
     const faders = document.querySelectorAll(".fade");
 
 const observer = new IntersectionObserver((entries)=>{
