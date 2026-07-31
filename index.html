@@ -120,7 +120,37 @@ transition:.3s;
 .button:hover{
 transform:scale(1.08);
 }
+@media (max-width: 768px) {
 
+  nav {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .card {
+    width: 90% !important;
+    margin: 20px auto;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  p, a {
+    font-size: 18px;
+    word-break: break-word;
+  }
+
+  img.profile {
+    width: 140px;
+    height: 140px;
+  }
 </style>
 
 </head>
