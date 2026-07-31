@@ -320,7 +320,24 @@ themeBtn.addEventListener("click", () => {
 
     darkMode = !darkMode;
 });
-  </script>
-  
+    <script>
+    // typing animation code
+
+    typeEffect();
+
+    // 👇 Fade animation code inga
+    const faders = document.querySelectorAll(".fade");
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+            }
+        });
+    });
+
+    faders.forEach(item => observer.observe(item));
+
+</script>
 </body>
 </html>
