@@ -303,6 +303,19 @@ function typeEffect() {
 }
 
 typeEffect();
+    const themeBtn = document.getElementById("themeBtn");
+
+themeBtn.addEventListener("click", () => {
+    if (document.body.style.backgroundColor === "white") {
+        document.body.style.backgroundColor = "#0f172a";
+        document.body.style.color = "white";
+        themeBtn.innerHTML = "🌙";
+    } else {
+        document.body.style.backgroundColor = "white";
+        document.body.style.color = "black";
+        themeBtn.innerHTML = "☀️";
+    }
+});
   </script>
   
 </body>
