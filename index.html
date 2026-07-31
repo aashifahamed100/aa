@@ -78,7 +78,14 @@ a{
 .button:hover{
     transform:scale(1.05);
 }
+.card{
+    transition:0.3s;
+}
 
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(0,0,0,.4);
+}
 </style>
 
 </head>
@@ -122,3 +129,199 @@ Explore Portfolio
 </div>
 
 </section>
+<section id="about">
+
+<div class="card">
+<h2>About Me</h2>
+
+<p>
+Hi! I'm <b>Aashif Ahmed</b> from Kattankudy, Eastern Province, Sri Lanka.
+I create premium websites, AI-powered designs and modern digital experiences with a focus on clean, creative and user-friendly interfaces.
+</p>
+
+</div>
+
+<br>
+
+<h2 style="text-align:center;">My Skills</h2>
+
+<br>
+
+<div class="card">
+<h3>💻 Learning Programming</h3>
+<p>Currently learning HTML, CSS and JavaScript.</p>
+</div>
+
+<br>
+
+<div class="card">
+<h3>🎨 UI Design</h3>
+<p>Interested in modern UI, glassmorphism and responsive design.</p>
+</div>
+
+<br>
+
+<div class="card">
+<h3>🤖 AI Tools</h3>
+<p>Using AI tools like ChatGPT to build websites and improve productivity.</p>
+</div>
+
+</section>
+<section id="projects">
+
+<h2 style="text-align:center;margin-bottom:40px;font-size:38px;">
+My Projects
+</h2>
+
+<div style="
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+">
+
+<div class="card">
+<h3>🌐 Personal Portfolio</h3>
+<p>
+Modern glassmorphism portfolio website built using HTML, CSS and JavaScript.
+</p>
+</div>
+
+<div class="card">
+<h3>🤖 AI Projects</h3>
+<p>
+Creating AI-powered tools and experimenting with ChatGPT workflows.
+</p>
+</div>
+
+<div class="card">
+<h3>🎨 UI Design</h3>
+<p>
+Designing clean, modern and responsive website interfaces.
+</p>
+</div>
+
+</div>
+
+</section>
+<section id="contact">
+
+<h2 style="text-align:center;margin-bottom:40px;font-size:38px;">
+Contact Me
+</h2>
+
+<div class="card" style="max-width:650px;margin:auto;">
+
+<p>📧 <strong>Email:</strong>
+<a href="mailto:aashifahamed100@gmail.com">
+aashifahamed100@gmail.com
+</a>
+</p>
+
+<p>📱 <strong>Phone:</strong>
+<a href="tel:+94703904514">
++94 703904514
+</a>
+</p>
+
+<p>💬 <strong>WhatsApp:</strong>
+<a href="https://wa.me/94703904514" target="_blank">
+Message Me
+</a>
+</p>
+
+<p>📍 <strong>Location:</strong>
+Kattankudy, Sri Lanka
+</p>
+
+<p>📷 <strong>Instagram:</strong>
+<a href="https://instagram.com/aashif.xhxmed_" target="_blank">
+@aashif.xhxmed_
+</a>
+</p>
+
+<p>💻 <strong>GitHub:</strong>
+<a href="https://github.com/aashifahamed100" target="_blank">
+github.com/aashifahamed100
+</a>
+</p>
+
+</div>
+
+</section>
+
+<footer style="text-align:center;padding:30px;color:#aaa;">
+© 2025 Aashif Ahmed. All Rights Reserved.
+</footer>
+    <button id="topBtn"
+onclick="window.scrollTo({top:0,behavior:'smooth'})"
+style="
+position:fixed;
+bottom:20px;
+right:20px;
+padding:15px;
+border:none;
+border-radius:50%;
+background:#4f46e5;
+color:white;
+cursor:pointer;
+font-size:20px;
+">
+⬆
+    </button>
+<script>
+
+const words = [
+"AI Designer",
+"Creative Developer",
+"Frontend Learner",
+"Web Designer"
+];
+
+let word = 0;
+let letter = 0;
+let deleting = false;
+
+function typing(){
+
+const text = document.getElementById("typing");
+
+if(!text) return;
+
+if(!deleting){
+
+text.innerHTML = words[word].substring(0,letter++);
+
+if(letter > words[word].length){
+
+deleting = true;
+
+setTimeout(typing,1200);
+
+return;
+
+}
+
+}else{
+
+text.innerHTML = words[word].substring(0,letter--);
+
+if(letter < 0){
+
+deleting = false;
+
+word = (word+1)%words.length;
+
+}
+
+}
+
+setTimeout(typing,deleting?50:90);
+
+}
+
+typing();
+
+</script>
+
+</body>
+</html>
