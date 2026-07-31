@@ -1,4 +1,4 @@
-welcome<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -139,86 +139,67 @@ transform:scale(1.08);
     font-size: 28px;
   }
 
-  p, a {
-    font-size: 18px;
-    word-break: break-word;
-  }
-
-  img.profile {
-    width: 140px;
-    height: 140px;
-  }
-  @media (max-width:768px){
+@media (max-width:768px){
 
 nav{
-    display:flex;
     flex-direction:column;
     align-items:center;
-    gap:12px;
+    gap:15px;
     padding:20px;
 }
+
+nav div{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+}
+
 .hero{
-    min-height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
-    padding:40px 20px;
+    min-height:100vh;
+    padding:120px 20px 40px;
+}
+
+.card{
+    width:90%;
+    max-width:700px;
+    margin:20px auto;
+    padding:25px;
 }
 
 .profile{
     width:140px;
     height:140px;
-    margin-top:20px;
 }
-  }
-  nav div{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:15px;
-  }
-  body{
-    margin:0;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
+
+h1{
+    font-size:36px;
+}
+
+h2{
+    font-size:30px;
+}
+
+p{
+    font-size:16px;
+}
 }
 
 section{
     width:100%;
-    max-width:1100px;
+    padding:80px 10%;
+}
+
+#about{
+    text-align:center;
+}
+
+#contact .card{
+    max-width:600px;
     margin:auto;
-}
-
-.card{
-    margin-left:auto;
-    margin-right:auto;
-}
-  .card{
-   /* existing styles */
-}
-
-#about,
-#skills{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-}
-
-#about .card,
-#skills .card{
-    width:100%;
-    max-width:700px;
-    margin:20px auto;
-}
-
-#skills h2,
-#about h2{
-    text-align:center;
-}
-#skills h2{
-    width:100%;
-    text-align:center;
 }
 </style>
 
