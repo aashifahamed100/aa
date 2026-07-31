@@ -5,50 +5,66 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Aashif Ahmed | Portfolio</title>
 <style>
+*{margin:0;padding:0;box-sizing:border-box}
 body{
-    margin:0;
-    font-family:Arial,sans-serif;
-    background:#111;
-    color:white;
-    text-align:center;
+font-family:Arial,sans-serif;
+background:linear-gradient(-45deg,#0f172a,#111827,#1e293b,#312e81);
+background-size:400% 400%;
+animation:bg 12s ease infinite;
+color:#fff;
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px;
 }
-header{
-    padding:80px 20px;
+@keyframes bg{
+0%{background-position:0% 50%}
+50%{background-position:100% 50%}
+100%{background-position:0% 50%}
 }
-h1{
-    font-size:48px;
+.card{
+max-width:700px;
+width:100%;
+background:rgba(255,255,255,.12);
+backdrop-filter:blur(16px);
+border:1px solid rgba(255,255,255,.2);
+border-radius:24px;
+padding:40px;
+text-align:center;
+box-shadow:0 10px 30px rgba(0,0,0,.35);
 }
-p{
-    color:#bbb;
-    font-size:20px;
-}
+h1{font-size:42px;margin-bottom:10px}
+p{color:#ddd;line-height:1.7}
 .btn{
-    display:inline-block;
-    margin-top:20px;
-    padding:12px 25px;
-    background:white;
-    color:black;
-    text-decoration:none;
-    border-radius:30px;
-    font-weight:bold;
+display:inline-block;
+margin-top:24px;
+padding:12px 24px;
+background:#fff;
+color:#111;
+text-decoration:none;
+border-radius:999px;
+font-weight:bold;
+transition:.3s;
 }
-section{
-    padding:60px 20px;
+.btn:hover{transform:scale(1.05)}
+.skills{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:25px}
+.skills span{
+padding:10px 16px;
+border-radius:999px;
+background:rgba(255,255,255,.12);
+border:1px solid rgba(255,255,255,.2);
 }
 </style>
 </head>
 <body>
-
-<header>
+<div class="card">
 <h1>Hi, I'm Aashif Ahmed</h1>
-<p>Welcome to my personal portfolio.</p>
-<a class="btn" href="#about">Explore</a>
-</header>
-
-<section id="about">
-<h2>About Me</h2>
-<p>I am passionate about technology, creativity, and building amazing projects.</p>
-</section>
-
+<p>Welcome to my premium glassmorphism portfolio website.</p>
+<div class="skills">
+<span>AI</span><span>Design</span><span>Photography</span><span>Web</span>
+</div>
+<a class="btn" href="mailto:you@example.com">Contact Me</a>
+</div>
 </body>
 </html>
