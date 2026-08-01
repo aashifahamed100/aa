@@ -62,12 +62,15 @@ p{
     line-height:1.8;
     color:#ddd;
 }
-
 a{
     color:white;
     text-decoration:none;
+    transition:0.3s;
 }
 
+nav a:hover{
+    color:#8b5cf6;
+}
 .button{
     display:inline-block;
     margin-top:25px;
@@ -171,6 +174,57 @@ progress::-moz-progress-bar{
         gap:15px;
     }
 }
+    @media (max-width:768px){
+
+nav{
+    flex-direction:column;
+    padding:15px;
+}
+
+nav h2{
+    margin-bottom:10px;
+}
+
+nav div{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+}
+
+section{
+    padding:80px 20px;
+}
+
+.card{
+    width:100%;
+}
+
+h1{
+    font-size:36px;
+}
+
+.profile{
+    width:140px !important;
+    height:140px !important;
+}
+
+    }
+    .profile{
+    animation:glow 2.5s infinite alternate;
+}
+
+@keyframes glow{
+    from{
+        box-shadow:0 0 10px #4f46e5;
+    }
+    to{
+        box-shadow:
+            0 0 20px #4f46e5,
+            0 0 40px #7c3aed,
+            0 0 60px #8b5cf6;
+    }
+}
 </style>
 
 </head>
@@ -191,7 +245,7 @@ progress::-moz-progress-bar{
 
 <div class="card" style="max-width:750px;text-align:center;">
 
-<img src="profile.png"
+<img src="profile.png" class="profile"
 style="width:180px;height:180px;border-radius:50%;object-fit:cover;border:5px solid rgba(255,255,255,.3);">
 
 <h1 style="margin-top:20px;">Aashif Ahmed</h1>
