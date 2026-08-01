@@ -225,11 +225,93 @@ h1{
             0 0 60px #8b5cf6;
     }
 }
+    .button{
+    position:relative;
+    overflow:hidden;
+}
+
+.button::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-100%;
+    width:100%;
+    height:100%;
+    background:linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,.4),
+        transparent
+    );
+    transition:.6s;
+}
+
+.button:hover::before{
+    left:100%;
+}
+    .name{
+    background:linear-gradient(
+        90deg,
+        #60a5fa,
+        #8b5cf6,
+        #ec4899,
+        #60a5fa
+    );
+    background-size:300% 300%;
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    animation:gradientText 5s linear infinite;
+}
+
+@keyframes gradientText{
+    0%{background-position:0%;}
+    100%{background-position:300%;}
+}
+    .hero{
+    position:relative;
+    overflow:hidden;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    width:350px;
+    height:350px;
+    background:radial-gradient(circle,#8b5cf6,transparent 70%);
+    top:-100px;
+    left:-100px;
+    opacity:.35;
+    filter:blur(30px);
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    width:350px;
+    height:350px;
+    background:radial-gradient(circle,#06b6d4,transparent 70%);
+    bottom:-100px;
+    right:-100px;
+    opacity:.35;
+    filter:blur(30px);
+}
+    #cursor{
+    position:fixed;
+    width:20px;
+    height:20px;
+    border-radius:50%;
+    background:#8b5cf6;
+    pointer-events:none;
+    transform:translate(-50%,-50%);
+    box-shadow:0 0 20px #8b5cf6;
+    z-index:9999;
+    }
 </style>
 
 </head>
 
 <body>
+    <div id="cursor"></div>
 <nav class="navbar">
     <h2>Aashif</h2>
 
@@ -243,12 +325,12 @@ h1{
 
 <section id="home" style="min-height:100vh;display:flex;justify-content:center;align-items:center;padding-top:100px;">
 
-<div class="card" style="max-width:750px;text-align:center;">
+<div class="card fade" style="max-width:750px;text-align:center;position:relative;z-index:1;">
 
 <img src="profile.png" class="profile"
 style="width:180px;height:180px;border-radius:50%;object-fit:cover;border:5px solid rgba(255,255,255,.3);">
 
-<h1 style="margin-top:20px;">Aashif Ahmed</h1>
+<h1 class="name" style="margin-top:20px;">Aashif Ahmed</h1>
 
 <p id="typing"
 style="font-size:22px;color:#9ecbff;height:35px;font-weight:600;">
@@ -457,6 +539,12 @@ const observer = new IntersectionObserver((entries)=>{
 });
 
 faders.forEach(card=>observer.observe(card));
+    const cursor = document.getElementById("cursor");
+
+document.addEventListener("mousemove",(e)=>{
+    cursor.style.left = e.clientX + "px";
+    cursor.style.top = e.clientY + "px";
+});
 </script>
 
 </body>
