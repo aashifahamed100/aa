@@ -377,7 +377,7 @@ footer{
     backdrop-filter:blur(15px);
     z-index:1000;
 }
-@media (max-width:768px){
+@media (max-width:768px)
 
     .navbar{
         padding:18px 20px;
@@ -441,7 +441,7 @@ footer{
 </head>
 
 <body>
-<div id="particles-js"></div>
+<div id="particles"></div>
 <div id="cursor"></div>
     
 <nav class="navbar">
@@ -701,6 +701,7 @@ for(let i=0;i<40;i++){
     p.style.animationDelay=Math.random()*8+"s";
 
     particles.appendChild(p);
+    const particles = document.getElementById("particles");
 }
 </script>
 </body>
