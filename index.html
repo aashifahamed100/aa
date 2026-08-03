@@ -72,14 +72,19 @@ nav a:hover{
 .button{
     display:inline-block;
     margin-top:25px;
-    padding:14px 30px;
+    padding:16px 38px;
     background:linear-gradient(90deg,#FFD700,#C9A227);
-color:#111;
-box-shadow:0 10px 25px rgba(255,215,0,.4);
+    color:#111;
+    font-weight:700;
+    text-decoration:none;
+    border-radius:999px;
+    transition:.35s ease;
+    box-shadow:0 10px 25px rgba(255,215,0,.35);
 }
+
 .button:hover{
-    transform:translateY(-3px) scale(1.05);
-    box-shadow:0 15px 35px rgba(255,215,0,.6);
+    transform:translateY(-4px) scale(1.05);
+    box-shadow:0 18px 35px rgba(255,215,0,.6);
 }
 .card{
     background:rgba(20,20,20,.75);
@@ -91,10 +96,10 @@ box-shadow:0 10px 25px rgba(255,215,0,.4);
 }
 
 .card:hover{
-    transform:translateY(-10px) scale(1.02);
+    transform:translateY(-10px);
     box-shadow:
-    0 20px 40px rgba(0,0,0,.6),
-    0 0 25px rgba(255,215,0,.4);
+    0 0 20px rgba(255,215,0,.2),
+    0 20px 40px rgba(0,0,0,.5);
 }
     .fade{
     opacity:0;
@@ -116,13 +121,12 @@ box-shadow:0 10px 25px rgba(255,215,0,.4);
 }
 
 progress::-webkit-progress-bar{
-    background:#2d3748;
+    background:#FFD700;
     border-radius:10px;
 }
 
 progress::-webkit-progress-value{
     background:linear-gradient(90deg,#FFD700,#C9A227);
-    border-radius:10px;
 }
 
 progress::-moz-progress-bar{
@@ -241,6 +245,7 @@ h1{
     .button{
     position:relative;
     overflow:hidden;
+        border-radius:999px;
 }
 
 .button::before{
@@ -264,25 +269,28 @@ h1{
 }
     .name{
     background:linear-gradient(
-    90deg,
-    #FFD700,
-    #FFF3B0,
-    #C9A227,
-    #FFD700);
+        90deg,
+        #FFD700,
+        #FFF3B0,
+        #C9A227,
+        #FFD700
+    );
     background-size:300% 300%;
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
     animation:gradientText 5s linear infinite;
     }
-    background-size:300% 300%;
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
-    animation:gradientText 5s linear infinite;
-}
 
 @keyframes gradientText{
-    0%{background-position:0%;}
-    100%{background-position:300%;}
+    0%{
+        background-position:0% 50%;
+    }
+    50%{
+        background-position:100% 50%;
+    }
+    100%{
+        background-position:0% 50%;
+    }
 }
     .hero{
     position:relative;
@@ -314,13 +322,13 @@ h1{
 }
     #cursor{
     position:fixed;
-    width:20px;
-    height:20px;
+    width:18px;
+    height:18px;
     border-radius:50%;
-    background:#8b5cf6;
+    background:#FFD700;
+    box-shadow:0 0 20px #FFD700;
     pointer-events:none;
     transform:translate(-50%,-50%);
-    box-shadow:0 0 20px #8b5cf6;
     z-index:9999;
     }
    #loader{
@@ -356,10 +364,16 @@ h1{
 }
     #menuBtn{
     display:none;
-    font-size:30px;
+    font-size:32px;
+    color:#FFD700;
     cursor:pointer;
-    color:white;
-    }
+    transition:.3s;
+}
+
+#menuBtn:hover{
+    color:#FFF3B0;
+    transform:scale(1.1);
+}
 .navbar{
     position:fixed;
     top:0;
@@ -398,13 +412,7 @@ h1{
 <body>
 
 <div id="cursor"></div>
-
-<!--
-<div id="loader">
-    <div class="loader-circle"></div>
-    <h2>Loading...</h2>
-</div>
--->
+    
 <nav class="navbar">
 
 <h2>Aashif</h2>
