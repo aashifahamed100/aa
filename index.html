@@ -397,6 +397,40 @@ footer{
     display:flex;
 }
 }
+    #particles{
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    z-index:-1;
+    pointer-events:none;
+}
+
+.particle{
+    position:absolute;
+    width:4px;
+    height:4px;
+    border-radius:50%;
+    background:#FFD700;
+    box-shadow:0 0 10px #FFD700;
+    animation:float 12s linear infinite;
+}
+
+@keyframes float{
+    from{
+        transform:translateY(100vh);
+        opacity:0;
+    }
+    20%{
+        opacity:1;
+    }
+    80%{
+        opacity:1;
+    }
+    to{
+        transform:translateY(-100px);
+        opacity:0;
+    }
+}
 </style>
 
 </head>
@@ -649,6 +683,20 @@ const navLinks = document.querySelector(".nav-links");
 menuBtn.addEventListener("click", () => {
     navLinks.classList.toggle("active");
 });
+    const particles = document.getElementById("particles");
+
+for(let i=0;i<40;i++){
+
+    const p=document.createElement("span");
+
+    p.className="particle";
+
+    p.style.left=Math.random()*100+"%";
+    p.style.animationDuration=(8+Math.random()*8)+"s";
+    p.style.animationDelay=Math.random()*8+"s";
+
+    particles.appendChild(p);
+}
 </script>
 </body>
 </html>
