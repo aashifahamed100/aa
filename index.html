@@ -23,12 +23,12 @@ html{
 }
 
 body{
-    background: linear-gradient(-45deg,
-#0f172a,
-#1e1b4b,
-#312e81,
-#4f46e5);
-background-size:400% 400%;
+    background:linear-gradient(-45deg,
+    #000000,
+    #111111,
+    #1a1a1a,
+    #2b2b2b);
+    background-size:400% 400%;
     animation:bg 12s ease infinite;
     color:#fff;
     overflow-x:hidden;
@@ -67,33 +67,35 @@ a{
     text-decoration:none;
     transition:0.3s;
 }
-
 nav a:hover{
-    color:#8b5cf6;
+    color:#FFD700;
 }
 .button{
     display:inline-block;
     margin-top:25px;
     padding:14px 30px;
-    background:linear-gradient(90deg,#4f46e5,#7c3aed);
-    color:white;
-    border-radius:30px;
-    font-weight:bold;
-    transition:.3s;
-    box-shadow:0 10px 25px rgba(124,58,237,.4);
+    background:linear-gradient(90deg,#FFD700,#C9A227);
+color:#111;
+box-shadow:0 10px 25px rgba(255,215,0,.4);
 }
 .button:hover{
-    transform:scale(1.05);
+    transform:translateY(-3px) scale(1.05);
+    box-shadow:0 15px 35px rgba(255,215,0,.6);
 }
 .card{
-    transition:0.3s;
+    background:rgba(20,20,20,.75);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,215,0,.25);
+    border-radius:25px;
+    padding:30px;
+    box-shadow:0 15px 30px rgba(0,0,0,.5);
 }
 
 .card:hover{
     transform:translateY(-10px) scale(1.02);
     box-shadow:
-        0 20px 40px rgba(0,0,0,.4),
-        0 0 25px rgba(124,58,237,.4);
+    0 20px 40px rgba(0,0,0,.6),
+    0 0 25px rgba(255,215,0,.4);
 }
     .fade{
     opacity:0;
@@ -120,12 +122,12 @@ progress::-webkit-progress-bar{
 }
 
 progress::-webkit-progress-value{
-    background:linear-gradient(90deg,#4f46e5,#7c3aed);
+    background:linear-gradient(90deg,#FFD700,#C9A227);
     border-radius:10px;
 }
 
 progress::-moz-progress-bar{
-    background:linear-gradient(90deg,#4f46e5,#7c3aed);
+    background:linear-gradient(90deg,#FFD700,#C9A227);
 }
     .fade{
     opacity:0;
@@ -228,13 +230,13 @@ h1{
 
 @keyframes glow{
     from{
-        box-shadow:0 0 10px #4f46e5;
+        box-shadow:0 0 10px #FFD700;
     }
     to{
         box-shadow:
-            0 0 20px #4f46e5,
-            0 0 40px #7c3aed,
-            0 0 60px #8b5cf6;
+        0 0 20px #FFD700,
+        0 0 40px #C9A227,
+        0 0 60px #FFF3B0;
     }
 }
     .button{
@@ -263,12 +265,16 @@ h1{
 }
     .name{
     background:linear-gradient(
-        90deg,
-        #60a5fa,
-        #8b5cf6,
-        #ec4899,
-        #60a5fa
-    );
+    90deg,
+    #FFD700,
+    #FFF3B0,
+    #C9A227,
+    #FFD700);
+    background-size:300% 300%;
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    animation:gradientText 5s linear infinite;
+    }
     background-size:300% 300%;
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
