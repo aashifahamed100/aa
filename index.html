@@ -341,11 +341,13 @@ background:radial-gradient(circle,#C9A227,transparent 70%);
 }
 #particles-js{
     position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    z-index:-1;
+    inset:0;
+    z-index:0;
+ .navbar,
+section,
+footer{
+    position:relative;
+    z-index:1;
 }
 @keyframes spin{
     to{
@@ -647,7 +649,10 @@ const navLinks = document.querySelector(".nav-links");
 menuBtn.addEventListener("click", () => {
     navLinks.classList.toggle("active");
 });
-    tsParticles.load("particles-js",{
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+
+<script>
+tsParticles.load("particles-js",{
   particles:{
     number:{value:50},
     color:{value:"#FFD700"},
@@ -656,11 +661,15 @@ menuBtn.addEventListener("click", () => {
       color:"#FFD700",
       opacity:0.3
     },
-    move:{enable:true,speed:1.5},
-    size:{value:3}
+    move:{
+      enable:true,
+      speed:1.5
+    },
+    size:{
+      value:3
+    }
   }
 });
 </script>
-<script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
 </body>
 </html>
