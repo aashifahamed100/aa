@@ -296,29 +296,12 @@ h1{
     position:relative;
     overflow:hidden;
 }
-
 .hero::before{
-    content:"";
-    position:absolute;
-    width:350px;
-    height:350px;
-    background:radial-gradient(circle,#8b5cf6,transparent 70%);
-    top:-100px;
-    left:-100px;
-    opacity:.35;
-    filter:blur(30px);
+background:radial-gradient(circle,#FFD700,transparent 70%);
 }
 
 .hero::after{
-    content:"";
-    position:absolute;
-    width:350px;
-    height:350px;
-    background:radial-gradient(circle,#06b6d4,transparent 70%);
-    bottom:-100px;
-    right:-100px;
-    opacity:.35;
-    filter:blur(30px);
+background:radial-gradient(circle,#C9A227,transparent 70%);
 }
     #cursor{
     position:fixed;
@@ -650,15 +633,6 @@ faders.forEach(card=>observer.observe(card));
 document.addEventListener("mousemove",(e)=>{
     cursor.style.left = e.clientX + "px";
     cursor.style.top = e.clientY + "px";
-});window.addEventListener("load", () => {
-    setTimeout(() => {
-        const loader = document.getElementById("loader");
-        loader.style.opacity = "0";
-
-        setTimeout(() => {
-            loader.style.display = "none";
-        }, 500);
-    }, 1500);
 });
     const menuBtn = document.getElementById("menuBtn");
 const navLinks = document.querySelector(".nav-links");
