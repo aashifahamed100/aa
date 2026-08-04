@@ -180,7 +180,7 @@ progress::-moz-progress-bar{
 .nav-links.active{
     display:flex;
 }
-@media (max-width:768px)
+@media (max-width:768px){
     .navbar{
         flex-direction:row;
         justify-content:space-between;
@@ -344,10 +344,6 @@ background:radial-gradient(circle,#C9A227,transparent 70%);
 #loader h2{
     margin-top:20px;
     color:white;
-}
-
-    position:relative;
-    z-index:1;
 }
 @keyframes spin{
     to{
@@ -701,8 +697,7 @@ for(let i=0;i<40;i++){
     p.style.animationDelay=Math.random()*8+"s";
 
     particles.appendChild(p);
-    const particles = document.getElementById("particles");
-}
+    }
 </script>
 </body>
 </html>
