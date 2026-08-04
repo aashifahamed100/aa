@@ -231,19 +231,19 @@ h1{
 }
 
     }
-    .profile{
-    animation:glow 2.5s infinite alternate;
+.profile{
+    animation: glow 2.5s ease-in-out infinite alternate;
 }
 
 @keyframes glow{
     from{
-        box-shadow:0 0 10px #FFD700;
+        box-shadow:0 0 15px rgba(255,215,0,.7);
     }
     to{
         box-shadow:
-        0 0 20px #FFD700,
-        0 0 40px #C9A227,
-        0 0 60px #FFF3B0;
+        0 0 30px rgba(255,215,0,1),
+        0 0 60px rgba(255,215,0,.9),
+        0 0 90px rgba(255,215,0,.7);
     }
 }
     .button{
@@ -469,7 +469,7 @@ footer{
 <div class="card fade" style="max-width:750px;text-align:center;position:relative;z-index:1;">
 
 <img src="profile.png" class="profile"
-style="width:180px;height:180px;border-radius:50%;object-fit:cover;border:5px solid rgba(255,255,255,.3);">
+style="width:180px;height:180px;border-radius:50%;object-fit:cover;border:4px solid #FFD700;">
 
 <h1 class="name" style="margin-top:20px;">Aashif Ahmed</h1>
 
